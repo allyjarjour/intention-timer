@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>Intention Timer</title>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>INTENTION TIMER</h1>
+  </header>
+  <main>
+    <h2>New Activity</h2>
+    <section class="new-activity">
+      <p>Select a category:</p>
+      <div class="category-boxes">
+        <p>Study</p>
+      </div>
+      <div class="category-boxes">
+        <p>Meditate</p>
+      </div>
+      <div class="category-boxes">
+        <p>Exercise</p>
+      </div>
+      <!-- we may have to adjust these min and max lengths -->
+      <p>What would you like to accomplish during this time?</p>
+      <input type="text" minlength="1" maxlength="100"/>
+      <p>Minutes</p>
+      <!-- we can change type to number but then it gives us a button to add numbers -->
+      <input type="text" minlength="1" maxlength="4"/>
+      <p>Seconds</p>
+      <input type="text" minlength="1" maxlength="4"/>
+      <button>START ACTIVITY</button>
+    </section>
+  </main>
+  <aside>
+    <h2>Past Activities</h2>
+    <p>You haven't logged any activities yet.
+      <br />Complete the form to the left to get started.</p>
+  </aside>
+</body>
