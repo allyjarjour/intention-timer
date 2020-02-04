@@ -29,19 +29,19 @@
       </div>
       <!-- we may have to adjust these min and max lengths -->
       <p>What would you like to accomplish during this time?</p>
-      <input type="text" minlength="1" maxlength="100"/>
-      <div>
-      <div class="time">
-      <p>Minutes</p>
+      <input class="accomp-input" type="text" minlength="1" maxlength="100"/>
+      <section class="time-input-container">
+        <div class="time">
+          <p>Minutes</p>
       <!-- we can change type to number but then it gives us a button to add
       numbers -->
-      <input type="text" minlength="1" maxlength="4"/>
-    </div>
-    <div class="time">
-      <p>Seconds</p>
-      <input type="text" minlength="1" maxlength="4"/>
-    </div>
-    </div>
+          <input class="time-input" type="text" minlength="1" maxlength="4"/>
+        </div>
+        <div class="time">
+          <p>Seconds</p>
+          <input class="time-input" type="text" minlength="1" maxlength="4"/>
+        </div>
+      </section>
       <button>START ACTIVITY</button>
     </section>
   </main>
