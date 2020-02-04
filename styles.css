@@ -9,11 +9,19 @@ h1 {
   text-align: center;
   color: #FFF;
   background-color: #46424D;
+  height: 70px;
+  margin: 0px;
 }
 
 main {
   display: inline-block;
   color: #CBC9CF;
+  width: 70%;
+}
+
+h2 {
+  padding-top: 15px;
+  padding-left: 20px;
 }
 
 aside {
@@ -34,6 +42,8 @@ h2, aside p {
 section {
   background-color: #46424D;
   border-radius: 4px;
+  width: 600px;
+  height: 375px;
 }
 
 aside p {
@@ -53,17 +63,19 @@ button {
   font-size: 16px;
   border-radius: 4px;
   float: right;
+  margin-top: 75px;
 }
 
 input[type=text] {
   background: transparent;
   border: none;
   border-bottom: 1px solid #FFF;
+  width: 595px;
 }
 
 .new-activity {
   padding: 100px 100px 100px 100px;
-  margin: 100px 100px 100px 100px;
+  margin: 20px 20px 20px 20px;
 }
 
 .category-boxes {
