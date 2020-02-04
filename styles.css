@@ -1,1 +1,30 @@
-/* font-family: 'Montserrat', sans-serif; */
+
+body {
+  margin: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  display: inline-block;
+}
+
+aside {
+  display: inline-block;
+  float: right;
+  padding-left: 20px;
+  width: 35%;
+  height: 600px;
+  background-color: #2B2733;
+  border-left: solid 3px #46424D;
+}
+
+h2, aside p {
+  color: #CBC9CF;
+  font-weight: 300;
+}
+
+aside p {
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: center;
+}
