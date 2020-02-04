@@ -13,6 +13,7 @@
     <h2>New Activity</h2>
     <section class="new-activity">
       <p>Select a category:</p>
+      <div id="category-box-container">
       <div class="category-boxes">
         <p>Study</p>
       </div>
@@ -22,15 +23,22 @@
       <div class="category-boxes">
         <p>Exercise</p>
       </div>
+      </div>
       <!-- we may have to adjust these min and max lengths -->
       <p>What would you like to accomplish during this time?</p>
       <input type="text" minlength="1" maxlength="100"/>
+      <div>
+      <div class="time">
       <p>Minutes</p>
       <!-- we can change type to number but then it gives us a button to add
       numbers -->
       <input type="text" minlength="1" maxlength="4"/>
+    </div>
+    <div class="time">
       <p>Seconds</p>
       <input type="text" minlength="1" maxlength="4"/>
+    </div>
+    </div>
       <button>START ACTIVITY</button>
     </section>
   </main>
