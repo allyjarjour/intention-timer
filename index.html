@@ -9,46 +9,48 @@
   <header>
     <h1>INTENTION TIMER</h1>
   </header>
-  <main>
-    <h2>New Activity</h2>
-    <section class="new-activity">
-      <p>Select a category:</p>
-      <div id="category-box-container">
-      <div class="category-boxes" id="study-cat">
-        <img class="idle-study" src="assets/study.svg" alt="Study Icon">
-        <p>Study</p>
-      </div>
-      <div class="category-boxes">
-        <img src="assets/meditate.svg" alt="Meditate Icon">
-        <p>Meditate</p>
-      </div>
-      <div class="category-boxes">
-        <img src="assets/exercise.svg" alt="Exercise Icon">
-        <p>Exercise</p>
-      </div>
-      </div>
-      <!-- we may have to adjust these min and max lengths -->
-      <p>What would you like to accomplish during this time?</p>
-      <input class="accomp-input" type="text" minlength="1" maxlength="100"/>
-      <section class="time-input-container">
-        <div class="time">
-          <p>Minutes</p>
-      <!-- we can change type to number but then it gives us a button to add
-      numbers -->
-          <input class="time-input" type="text" minlength="1" maxlength="4"/>
+  <main class="page-content">
+    <section class="left-side">
+      <h2>New Activity</h2>
+      <section class="new-activity">
+        <p>Select a category:</p>
+        <div id="category-box-container">
+          <div class="category-boxes" id="study-cat">
+            <img id="idle-study" src="assets/study.svg" alt="Study Icon">
+            <p id="study-text">Study</p>
+          </div>
+          <div class="category-boxes" id="med-cat">
+            <img id="idle-med" src="assets/meditate.svg" alt="Meditate Icon">
+            <p id="med-text">Meditate</p>
+          </div>
+          <div class="category-boxes" id="exercise-cat">
+            <img id="idle-exercise" src="assets/exercise.svg" alt="Exercise Icon">
+            <p id="exercise-text">Exercise</p>
+          </div>
         </div>
-        <div class="time">
-          <p>Seconds</p>
-          <input class="time-input" type="text" minlength="1" maxlength="4"/>
-        </div>
+        <!-- we may have to adjust these min and max lengths -->
+        <p>What would you like to accomplish during this time?</p>
+        <input class="accomp-input" type="text" minlength="1" maxlength="100"/>
+        <section class="time-input-container">
+          <div class="time">
+            <p>Minutes</p>
+        <!-- we can change type to number but then it gives us a button to add
+        numbers -->
+            <input class="time-input" type="text" minlength="1" maxlength="4"/>
+          </div>
+          <div class="time">
+            <p>Seconds</p>
+            <input class="time-input" type="text" minlength="1" maxlength="4"/>
+          </div>
+        </section>
+        <button>START ACTIVITY</button>
       </section>
-      <button>START ACTIVITY</button>
     </section>
+    <aside>
+      <h2>Past Activities</h2>
+      <p>You haven't logged any activities yet.
+        <br />Complete the form to the left to get started.</p>
+    </aside>
   </main>
-  <aside>
-    <h2>Past Activities</h2>
-    <p>You haven't logged any activities yet.
-      <br />Complete the form to the left to get started.</p>
-  </aside>
   <script type="text/javascript" src="main.js"></script>
 </body>

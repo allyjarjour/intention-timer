@@ -20,22 +20,32 @@ h2 {
   color: #CBC9CF;
   font-weight: 300;
   padding-top: 15px;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
-main {
+.left-side {
   color: #CBC9CF;
   display: inline-block;
+  flex: 2;
   width: 60%;
+}
+
+.page-content {
+  display: flex;
 }
 
 .new-activity {
   background-color: #46424D;
   border-radius: 4px;
-  box-shadow: 10px 10px 50px #121114;
+  box-shadow: 20px 20px 50px 10px #26222D;
+  height: 500px;
   margin: auto;
   padding: 60px 100px 150px 100px;
-  width: 600px;
+  width: 75%;
+}
+
+.new-activity p {
+  font-size: 20px;
 }
 
 img {
@@ -50,7 +60,7 @@ input[type=text] {
 }
 
 .accomp-input {
-  width: 595px;
+  width: 100%;
 }
 
 button {
@@ -61,10 +71,11 @@ button {
   display: inline-block;
   float: right;
   font-size: 16px;
-  margin-top: 55px;
+  margin-top: 75px;
   padding: 10px 32px;
   text-align: center;
   text-decoration: none;
+  width: 200px;
 }
 
 /* holds category boxes */
@@ -76,7 +87,7 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  width: 160px;
+  width: 200px;
 }
 
 #category-box-container {
@@ -84,7 +95,7 @@ button {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 
 #category-box-container p {
@@ -96,12 +107,15 @@ button {
 .time-input-container {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
-  width: 595px;
+  padding-top: 60px;
+}
+
+.time {
+  width: 40%;
 }
 
 .time-input {
-  width: 250px;
+  width: 100%;
 }
 
 /* _________ */
@@ -110,7 +124,8 @@ aside {
   background-color: #2B2733;
   border-left: solid 3px #46424D;
   display: inline-block;
-  height: 700px;
+  flex: 1;
+  height: 1000px;
   vertical-align: top;
   width: 35%;
 }
