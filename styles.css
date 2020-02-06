@@ -144,3 +144,11 @@ aside p {
   font-weight: 300;
   text-align: center;
 }
+
+/* timer card for start button */
+
+.timer-card {
+    color: #CBC9CF;
+    flex: 2;
+    width: 60%;
+}

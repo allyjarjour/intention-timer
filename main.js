@@ -43,10 +43,16 @@ function changeExerciseIcon() {
 // start activity function
 
 var startButton = document.querySelector('.start-button');
-var mainCard = document.querySelector('.left-side')
+var mainCard = document.querySelector('.left-side');
+var timerCard = document.querySelector('.timer-card');
 
 startButton.addEventListener('click', addTimer)
 
 function addTimer() {
   mainCard.classList.add('hidden');
+  timerCard.classList.remove('hidden');
+}
+
+window.onload = function hideTimerOnload() {
+  timerCard.classList.add('hidden');
 }
