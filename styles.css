@@ -152,3 +152,51 @@ aside p {
     flex: 2;
     width: 60%;
 }
+
+/* study button  */
+
+#study-cat-active {
+  border: 2px solid #B3FD78;
+  border-radius: 4px;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+#study-text-active {
+  color: #B3FD78;
+}
+
+/* meditate button  */
+
+#med-cat-active {
+  border: 2px solid #C278FD;
+  border-radius: 4px;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+#med-text-active{
+  color: #C278FD;
+}
+
+/* exercise button  */
+
+#exercise-cat-active {
+  border: 2px solid #FD8078;
+  border-radius: 4px;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+#exercise-text-active {
+  color: #FD8078;
+}

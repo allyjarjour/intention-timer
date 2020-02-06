@@ -1,46 +1,21 @@
-// change color of study category on click
+// study category variables
 
 var studyBox = document.querySelector('#study-cat');
-var idleStudy = document.querySelector('#idle-study');
-var studyText = document.querySelector('#study-text');
+var studyActive = document.querySelector('#study-cat-active');
 
-studyBox.addEventListener('click', changeStudyColor);
 
-function changeStudyColor() {
-  studyBox.style.border = "2px solid #B3FD78";
-  studyText.style.color = "#B3FD78";
-  idleStudy.src = "assets/study-active.svg";
-}
-
-// change color of meditate category on click
+// meditation category variables
 
 var medBox = document.querySelector('#med-cat');
-var idleMed = document.querySelector('#idle-med');
-var medText = document.querySelector('#med-text');
+var medActive = document.querySelector('#med-cat-active');
 
-medBox.addEventListener('click', changeMedColor);
 
-function changeMedColor() {
-  medBox.style.border = "2px solid #C278FD";
-  idleMed.src = "assets/meditate-active.svg";
-  medText.style.color = "#C278FD";
-}
+// exercise category variables
 
-// change color of meditate category on click
-
-var idleEx = document.querySelector('#idle-exercise');
-var exText = document.querySelector('#exercise-text');
 var exBox = document.querySelector('#exercise-cat');
+var exActive = document.querySelector('#exercise-cat-active');
 
-exBox.addEventListener('click', changeExerciseIcon);
-
-function changeExerciseIcon() {
-    idleEx.src = "assets/exercise-active.svg";
-    exText.style.color = "#FD8078";
-    exBox.style.border = "2px solid #FD8078";
-}
-
-// start activity function
+// variables, function and event listener for switching to timer card
 
 var startButton = document.querySelector('.start-button');
 var mainCard = document.querySelector('.left-side');
@@ -55,4 +30,42 @@ function addTimer() {
 
 window.onload = function hideTimerOnload() {
   timerCard.classList.add('hidden');
+  studyActive.classList.add('hidden');
+  medActive.classList.add('hidden');
+  exActive.classList.add('hidden');
+}
+
+// toggle categories - meditate, study and exercise
+
+studyBox.addEventListener('click', switchToStudyActive);
+
+function switchToStudyActive() {
+  studyBox.classList.add('hidden');
+  studyActive.classList.remove('hidden');
+  medActive.classList.add('hidden');
+  medBox.classList.remove('hidden');
+  exActive.classList.add('hidden');
+  exBox.classList.remove('hidden');
+}
+
+medBox.addEventListener('click', switchToMedActive);
+
+function switchToMedActive() {
+  studyActive.classList.add('hidden');
+  medBox.classList.add('hidden');
+  medActive.classList.remove('hidden');
+  studyBox.classList.remove('hidden');
+  exActive.classList.add('hidden');
+  exBox.classList.remove('hidden');
+}
+
+exBox.addEventListener('click', switchToExActive);
+
+function switchToExActive() {
+  studyActive.classList.add('hidden');
+  exBox.classList.add('hidden');
+  exActive.classList.remove('hidden');
+  studyBox.classList.remove('hidden');
+  medBox.classList.remove('hidden');
+  medActive.classList.add('hidden');
 }
