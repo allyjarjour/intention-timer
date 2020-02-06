@@ -24,13 +24,18 @@ var timerCard = document.querySelector('.timer-card');
 
 startButton.addEventListener('click', addTimer)
 
+// function addTimer() {
+//   if (accompInput.length >= 1){
+//   mainCard.classList.add('hidden');
+//   timerCard.classList.remove('hidden');
+// }
+// }
+
+
 function addTimer() {
-  if (accompInput.length >= 1){
   mainCard.classList.add('hidden');
   timerCard.classList.remove('hidden');
 }
-}
-
 // && timeInput.length >= 1
 // } else {
 //   mainCard.classList.remove('hidden');
