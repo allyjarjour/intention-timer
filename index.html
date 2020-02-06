@@ -42,14 +42,15 @@
         </div>
         <p>What would you like to accomplish during this time?</p>
         <input class="accomp-input" type="text" minlength="1" maxlength="100"/>
+        <p id="accomp-alert">Please add description</p>
         <section class="time-input-container">
           <div class="time">
             <p>Minutes</p>
-            <input class="time-input" type="number" min= "1"/>
+            <input class="time-input" oninput="numbersOnly(this)" type="text" min= "1"/>
           </div>
           <div class="time">
             <p>Seconds</p>
-            <input class="time-input" type="number" min = "1" />
+            <input class="time-input" oninput="numbersOnly(this)" type="text" min = "1" />
           </div>
         </section>
         <button class="start-button">START ACTIVITY</button>

@@ -21,18 +21,32 @@ var startButton = document.querySelector('.start-button');
 var mainCard = document.querySelector('.left-side');
 var timerCard = document.querySelector('.timer-card');
 
+
 startButton.addEventListener('click', addTimer)
 
 function addTimer() {
+  if (accompInput.length >= 1){
   mainCard.classList.add('hidden');
   timerCard.classList.remove('hidden');
 }
+}
+
+// && timeInput.length >= 1
+// } else {
+//   mainCard.classList.remove('hidden');
+//   timerCard.classList.add('hidden');
+// }
+
+
+
+var accompAlert = document.querySelector('#accomp-alert')
 
 window.onload = function hideTimerOnload() {
   timerCard.classList.add('hidden');
   studyActive.classList.add('hidden');
   medActive.classList.add('hidden');
   exActive.classList.add('hidden');
+  accompAlert.classList.add('hidden');
 }
 
 // toggle categories - meditate, study and exercise
@@ -68,4 +82,24 @@ function switchToExActive() {
   studyBox.classList.remove('hidden');
   medBox.classList.remove('hidden');
   medActive.classList.add('hidden');
+}
+
+// input validation
+
+var timeInput = document.querySelector('.time-input').value;
+
+function numbersOnly(timeInput) {
+  var regEx = /[^0-9]/g;
+  timeInput.value = timeInput.value.replace(regEx, " ");
+}
+
+// validate activity text
+var accompInput = document.querySelector('.accomp-input').value;
+
+startButton.addEventListener('click', validateAccompInput);
+
+function validateAccompInput() {
+  if (accompInput.length === 0) {
+    accompAlert.classList.remove('hidden');
+  }
 }

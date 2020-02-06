@@ -58,12 +58,6 @@ input {
   border-bottom: 1px solid #FFF;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .accomp-input {
   width: 100%;
 }
@@ -200,4 +194,8 @@ aside p {
 
 #exercise-text-active {
   color: #FD8078;
+}
+
+#accomp-alert {
+  font-size: 10px;
 }
