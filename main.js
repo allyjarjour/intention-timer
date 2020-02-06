@@ -1,38 +1,52 @@
 // change color of study category on click
 
-document.querySelector('#study-cat').addEventListener('click', changeStudyColor);
+var studyBox = document.querySelector('#study-cat');
+var idleStudy = document.querySelector('#idle-study');
+var studyText = document.querySelector('#study-text');
+
+studyBox.addEventListener('click', changeStudyColor);
 
 function changeStudyColor() {
-  document.querySelector('#study-cat').style.border = "2px solid #B3FD78";
-  document.querySelector('#study-text').style.color = "#B3FD78";
-  document.querySelector('#idle-study').src = "assets/study-active.svg";
+  studyBox.style.border = "2px solid #B3FD78";
+  studyText.style.color = "#B3FD78";
+  idleStudy.src = "assets/study-active.svg";
 }
 
 // change color of meditate category on click
 
-document.querySelector('#med-cat').addEventListener('click', changeMedColor);
+var medBox = document.querySelector('#med-cat');
+var idleMed = document.querySelector('#idle-med');
+var medText = document.querySelector('#med-text');
+
+medBox.addEventListener('click', changeMedColor);
 
 function changeMedColor() {
-  if (document.querySelector('#med-cat').style.border = "2px solid #FFF")
-  {
-    document.querySelector('#med-cat').style.border = "2px solid #C278FD";
-  } else {
-    document.querySelector('#med-cat').style.border = "2px solid #FFF";
-  }
-  if (document.querySelector('#idle-med').getAttribute('src') == "assets/meditate.svg")
-  {
-    document.querySelector('#idle-med').src = "assets/meditate-active.svg";
-  } else {document.querySelector('#idle-med').src = "assets/meditate.svg";
-  }
-  document.querySelector('#med-text').style.color = "#C278FD";
+  medBox.style.border = "2px solid #C278FD";
+  idleMed.src = "assets/meditate-active.svg";
+  medText.style.color = "#C278FD";
 }
 
 // change color of meditate category on click
 
-document.querySelector('#exercise-cat').addEventListener('click', changeExerciseIcon);
+var idleEx = document.querySelector('#idle-exercise');
+var exText = document.querySelector('#exercise-text');
+var exBox = document.querySelector('#exercise-cat');
+
+exBox.addEventListener('click', changeExerciseIcon);
 
 function changeExerciseIcon() {
-    document.querySelector('#idle-exercise').src = "assets/exercise-active.svg";
-    document.querySelector('#exercise-text').style.color = "#FD8078";
-    document.querySelector('#exercise-cat').style.border = "2px solid #FD8078";
+    idleEx.src = "assets/exercise-active.svg";
+    exText.style.color = "#FD8078";
+    exBox.style.border = "2px solid #FD8078";
+}
+
+// start activity function
+
+var startButton = document.querySelector('.start-button');
+var mainCard = document.querySelector('.left-side')
+
+startButton.addEventListener('click', addTimer)
+
+function addTimer() {
+  mainCard.classList.add('hidden');
 }

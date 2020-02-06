@@ -38,10 +38,9 @@ h2 {
   background-color: #46424D;
   border-radius: 4px;
   box-shadow: 20px 20px 50px 10px #26222D;
-  height: 500px;
   margin: auto;
   padding: 60px 100px 150px 100px;
-  width: 75%;
+  width: 65%;
 }
 
 .new-activity p {
@@ -53,10 +52,16 @@ img {
   width: 30px;
 }
 
-input[type=text] {
+input {
   background: transparent;
   border: none;
   border-bottom: 1px solid #FFF;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .accomp-input {
@@ -87,13 +92,17 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
-  width: 200px;
+  width: 150px;
+}
+
+.hidden {
+  display: none;
 }
 
 #category-box-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 60px;
 }
