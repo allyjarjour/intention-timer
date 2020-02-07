@@ -199,5 +199,12 @@ aside p {
 #accomp-alert,
 #second-alert,
 #minute-alert {
-  font-size: 10px;
+  font-size: 15px;
+  color: #EFB7EC;
+}
+
+.alert-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
