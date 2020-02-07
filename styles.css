@@ -208,3 +208,47 @@ aside p {
   height: 20px;
   margin-right: 5px;
 }
+
+.page-content {
+    display: flex;
+}
+
+.left-side-card2 {
+  color: #CBC9CF;
+  display: inline-block;
+  flex: 2;
+  width: 60%;
+}
+
+.current-activity {
+    background-color: #46424D;
+    border-radius: 4px;
+    box-shadow: 20px 20px 50px 10px #26222D;
+    margin: auto;
+    padding: 60px 100px 150px 100px;
+    width: 65%;
+}
+
+#current-box-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+.activity-name {
+
+}
+
+.card2-text {
+
+}
+
+.timer {
+
+}
+
+.timer-button {
+
+}
