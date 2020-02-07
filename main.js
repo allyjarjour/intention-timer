@@ -24,27 +24,16 @@ var timerCard = document.querySelector('.timer-card');
 
 startButton.addEventListener('click', addTimer)
 
-// function addTimer() {
-//   if (accompInput.length >= 1){
-//   mainCard.classList.add('hidden');
-//   timerCard.classList.remove('hidden');
-// }
-// }
-
-
 function addTimer() {
-  mainCard.classList.add('hidden');
-  timerCard.classList.remove('hidden');
+  if (accompInput.value.length > 0 && minuteInput.value.length > 0 && secondInput.value.length) {
+    mainCard.classList.add('hidden');
+    timerCard.classList.remove('hidden');
+  }
 }
-// && timeInput.length >= 1
-// } else {
-//   mainCard.classList.remove('hidden');
-//   timerCard.classList.add('hidden');
-// }
 
-
-
-var accompAlert = document.querySelector('#accomp-alert')
+var accompAlert = document.querySelector('#accomp-alert');
+var minuteAlert = document.querySelector('#minute-alert');
+var secondAlert = document.querySelector('#second-alert');
 
 window.onload = function hideTimerOnload() {
   timerCard.classList.add('hidden');
@@ -52,6 +41,8 @@ window.onload = function hideTimerOnload() {
   medActive.classList.add('hidden');
   exActive.classList.add('hidden');
   accompAlert.classList.add('hidden');
+  minuteAlert.classList.add('hidden');
+  secondAlert.classList.add('hidden');
 }
 
 // toggle categories - meditate, study and exercise
@@ -91,20 +82,42 @@ function switchToExActive() {
 
 // input validation
 
-var timeInput = document.querySelector('.time-input').value;
+var minuteInput = document.querySelector('#minute-input');
+var secondInput = document.querySelector('#second-input');
 
-function numbersOnly(timeInput) {
+
+function numbersOnly(minuteInput) {
   var regEx = /[^0-9]/g;
-  timeInput.value = timeInput.value.replace(regEx, " ");
+  minuteInput.value = minuteInput.value.replace(regEx, " ");
 }
 
 // validate activity text
-var accompInput = document.querySelector('.accomp-input').value;
+var accompInput = document.querySelector('.accomp-input');
 
-startButton.addEventListener('click', validateAccompInput);
+startButton.addEventListener('click', addAccompAlert);
 
-function validateAccompInput() {
-  if (accompInput.length === 0) {
+function addAccompAlert() {
+  if (accompInput.value.length === 0) {
     accompAlert.classList.remove('hidden');
+  }
+}
+
+// validate minute input
+
+startButton.addEventListener('click', addMinuteAlert);
+
+function addMinuteAlert() {
+  if (minuteInput.value.length === 0) {
+    minuteAlert.classList.remove('hidden');
+  }
+}
+
+// validate second input
+
+startButton.addEventListener('click', addSecondAlert);
+
+function addSecondAlert() {
+  if (secondInput.value.length === 0) {
+    secondAlert.classList.remove('hidden');
   }
 }

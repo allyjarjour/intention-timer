@@ -196,6 +196,8 @@ aside p {
   color: #FD8078;
 }
 
-#accomp-alert {
+#accomp-alert,
+#second-alert,
+#minute-alert {
   font-size: 10px;
 }
