@@ -25,12 +25,14 @@ var timerCard = document.querySelector('.timer-card');
 startButton.addEventListener('click', addTimer)
 
 function addTimer() {
-  if (accompInput.value.length > 0 && minuteInput.value.length > 0 && secondInput.value.length) {
+  if (accompInput.value.length > 0 && minuteInput.value.length > 0 && secondInput.value.length > 0) {
     mainCard.classList.add('hidden');
     timerCard.classList.remove('hidden');
     currentActTitle.classList.remove('hidden');
   }
 }
+
+// (studyBox.onclick == true || medBox.onclick == true || exBox.onclick == true)
 
 var accompAlert = document.querySelector('#accomp-alert');
 var minuteAlert = document.querySelector('#minute-alert');
@@ -95,37 +97,6 @@ function numbersOnly(minuteInput) {
   var regEx = /[^0-9]/g;
   minuteInput.value = minuteInput.value.replace(regEx, " ");
 }
-
-// add category alert
-
-var medClickCount = 0;
-var exClickCount = 0;
-var studyClickCount = 0;
-
-
-medBox.onclick = function() {
-  var medClickCount = 1;
-  return medClickCount;
-}
-
-exBox.onclick = function() {
-  var exClickCount = 1;
-  return exClickCount;
-}
-
-studyBox.onclick = function() {
-  var studyClickCount = 1;
-  return studyBox;
-}
-
-startButton.addEventListener('click', addActivityAlert);
-
-function addActivityAlert() {
-  if (medClickCount === 0 || exClickCount === 0 || studyClickCount === 0) {
-    catAlert.classList.remove('hidden');
-  }
-}
-
 // add activity alert
 var accompInput = document.querySelector('.accomp-input');
 
@@ -157,6 +128,36 @@ function addSecondAlert() {
   }
 }
 
+// add category alert
+
+var medClickCount = 0;
+var exClickCount = 0;
+var studyClickCount = 0;
+
+
+medBox.onclick = function() {
+  var medClickCount = 1;
+  return medClickCount;
+}
+
+exBox.onclick = function() {
+  var exClickCount = 1;
+  return exClickCount;
+}
+
+studyBox.onclick = function() {
+  var studyClickCount = 1;
+  return studyBox;
+}
+
+startButton.addEventListener('click', addActivityAlert);
+
+function addActivityAlert() {
+  if (medClickCount === 0 || exClickCount === 0 || studyClickCount === 0) {
+    catAlert.classList.remove('hidden');
+  }
+}
+
 // change timer button
 
 var timerButton = document.querySelector('.timer-button');
@@ -176,3 +177,34 @@ function changeTimerMed() {
 function changeTimerStudy() {
   timerButton.style.border = "1px solid #B3FD78";
 }
+
+// -----timer
+
+var minuteInput = document.querySelector('#minute-input');
+var secondInput = document.querySelector('#second-input');
+var seconds = document.querySelector('.seconds');
+var minutes = document.querySelector('.minutes');
+
+startButton.addEventListener('click', showTime);
+
+function showTime(){
+  minutes.innerText = minuteInput.value;
+  seconds.innerText = secondInput.value;
+}
+
+startButton.addEventListener('click', addTotalSeconds);
+
+function addTotalSeconds() {
+  return ((parseInt(minuteInput.value) * 60) + (parseInt(secondInput.value)));
+}
+
+// timerButton.addEventListener('click', startTimer);
+//
+// function startTimer() {
+//   var userTimer = (addTotalSeconds() * 1000);
+//   var interval = function(){
+//     while(userTimer > 0) {
+//       userTimer--; console.log(userTimer);
+//     }
+//   };
+// }
