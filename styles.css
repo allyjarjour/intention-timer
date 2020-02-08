@@ -143,9 +143,14 @@ aside p {
 /* timer card for start button */
 
 .timer-card {
-    color: #CBC9CF;
+    background-color: #46424D;
+    box-shadow: 20px 20px 50px 10px #26222D;
     flex: 2;
-    width: 60%;
+    height: 600px;
+    margin: 100px 30px;
+    padding-top: 40px;
+    text-align: center;
+    width: 65%;
 }
 
 /* study button  */
@@ -207,4 +212,46 @@ aside p {
   width: 20px;
   height: 20px;
   margin-right: 5px;
+}
+
+/* ------- */
+
+/* #current-box-container {
+  display: inline-block;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 60px;
+} */
+
+.card2-text {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.timer {
+  font-size: 75px;
+  margin: 0 auto;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.timer-button {
+  color: #FFF;
+  background-color: #46424D;
+  border-radius: 50%;
+  border:1px solid #FFF;
+  float: none;
+  width: 200px;
+  height: 200px;
+  /* text-align: center; */
+  /* vertical-align: middle; */
+  /* overflow: hidden;
+  transition: .4s; */
+}
+
+.current-activity-title {
+  position: absolute;
 }
