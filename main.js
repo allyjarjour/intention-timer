@@ -36,6 +36,7 @@ var accompAlert = document.querySelector('#accomp-alert');
 var minuteAlert = document.querySelector('#minute-alert');
 var secondAlert = document.querySelector('#second-alert');
 var currentActTitle = document.querySelector('.current-activity-title');
+var catAlert = document.querySelector('#category-alert');
 
 window.onload = function hideTimerOnload() {
   timerCard.classList.add('hidden');
@@ -46,6 +47,7 @@ window.onload = function hideTimerOnload() {
   minuteAlert.classList.add('hidden');
   secondAlert.classList.add('hidden');
   currentActTitle.classList.add('hidden');
+  catAlert.classList.add('hidden');
 }
 
 // toggle categories - meditate, study and exercise
@@ -94,7 +96,37 @@ function numbersOnly(minuteInput) {
   minuteInput.value = minuteInput.value.replace(regEx, " ");
 }
 
-// validate activity text
+// add category alert
+
+var medClickCount = 0;
+var exClickCount = 0;
+var studyClickCount = 0;
+
+
+medBox.onclick = function() {
+  var medClickCount = 1;
+  return medClickCount;
+}
+
+exBox.onclick = function() {
+  var exClickCount = 1;
+  return exClickCount;
+}
+
+studyBox.onclick = function() {
+  var studyClickCount = 1;
+  return studyBox;
+}
+
+startButton.addEventListener('click', addActivityAlert);
+
+function addActivityAlert() {
+  if (medClickCount === 0 || exClickCount === 0 || studyClickCount === 0) {
+    catAlert.classList.remove('hidden');
+  }
+}
+
+// add activity alert
 var accompInput = document.querySelector('.accomp-input');
 
 startButton.addEventListener('click', addAccompAlert);
@@ -105,7 +137,7 @@ function addAccompAlert() {
   }
 }
 
-// validate minute input
+// add minute alert
 
 startButton.addEventListener('click', addMinuteAlert);
 
@@ -115,7 +147,7 @@ function addMinuteAlert() {
   }
 }
 
-// validate second input
+// add second alert
 
 startButton.addEventListener('click', addSecondAlert);
 

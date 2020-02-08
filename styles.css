@@ -203,7 +203,8 @@ aside p {
 
 #accomp-alert,
 #second-alert,
-#minute-alert {
+#minute-alert,
+#category-alert {
   font-size: 15px;
   color: #EFB7EC;
 }
