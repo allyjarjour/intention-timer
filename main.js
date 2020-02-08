@@ -156,3 +156,23 @@ function addSecondAlert() {
     secondAlert.classList.remove('hidden');
   }
 }
+
+// change timer button
+
+var timerButton = document.querySelector('.timer-button');
+
+exBox.addEventListener('click', changeTimerEx);
+medBox.addEventListener('click', changeTimerMed);
+studyBox.addEventListener('click', changeTimerStudy);
+
+function changeTimerEx() {
+  timerButton.style.border = "1px solid #FD8078";
+}
+
+function changeTimerMed() {
+  timerButton.style.border = "1px solid #C278FD";
+}
+
+function changeTimerStudy() {
+  timerButton.style.border = "1px solid #B3FD78";
+}

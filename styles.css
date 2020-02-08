@@ -144,6 +144,7 @@ aside p {
 
 .timer-card {
     background-color: #46424D;
+    border-radius: 4px;
     box-shadow: 20px 20px 50px 10px #26222D;
     flex: 2;
     height: 600px;
@@ -225,6 +226,10 @@ aside p {
   padding-bottom: 60px;
 } */
 
+.current-activity-title {
+  position: absolute;
+}
+
 .card2-text {
   color: #FFF;
   font-family: 'Montserrat', sans-serif;
@@ -247,12 +252,5 @@ aside p {
   float: none;
   width: 200px;
   height: 200px;
-  /* text-align: center; */
-  /* vertical-align: middle; */
-  /* overflow: hidden;
   transition: .4s; */
-}
-
-.current-activity-title {
-  position: absolute;
 }
