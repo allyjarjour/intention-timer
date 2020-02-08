@@ -28,12 +28,14 @@ function addTimer() {
   if (accompInput.value.length > 0 && minuteInput.value.length > 0 && secondInput.value.length) {
     mainCard.classList.add('hidden');
     timerCard.classList.remove('hidden');
+    currentActTitle.classList.remove('hidden');
   }
 }
 
 var accompAlert = document.querySelector('#accomp-alert');
 var minuteAlert = document.querySelector('#minute-alert');
 var secondAlert = document.querySelector('#second-alert');
+var currentActTitle = document.querySelector('.current-activity-title');
 
 window.onload = function hideTimerOnload() {
   timerCard.classList.add('hidden');
@@ -43,6 +45,7 @@ window.onload = function hideTimerOnload() {
   accompAlert.classList.add('hidden');
   minuteAlert.classList.add('hidden');
   secondAlert.classList.add('hidden');
+  currentActTitle.classList.add('hidden');
 }
 
 // toggle categories - meditate, study and exercise
