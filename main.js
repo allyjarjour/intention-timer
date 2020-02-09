@@ -155,8 +155,10 @@ startButton.addEventListener('click', addActivityAlert);
 function addActivityAlert() {
   if (medClickCount === 0 || exClickCount === 0 || studyClickCount === 0) {
     catAlert.classList.remove('hidden');
-  }
 }
+}
+
+
 
 // change timer button
 
@@ -198,13 +200,22 @@ function addTotalSeconds() {
   return ((parseInt(minuteInput.value) * 60) + (parseInt(secondInput.value)));
 }
 
-// timerButton.addEventListener('click', startTimer);
-//
-// function startTimer() {
-//   var userTimer = (addTotalSeconds() * 1000);
-//   var interval = function(){
-//     while(userTimer > 0) {
-//       userTimer--; console.log(userTimer);
-//     }
-//   };
-// }
+var timerButton = document.querySelector('.timer-button');
+
+timerButton.addEventListener('click', timerStart);
+
+function timerStart() {
+  var myTimer = setInterval(clock, 1000);
+  var totalSeconds = addTotalSeconds();
+
+  function clock() {
+    minutes.innerText = Math.floor( (totalSeconds/60) % 60 );
+    seconds.innerText = Math.floor( (totalSeconds--) % 60 );
+
+    if (totalSeconds <= 0) {
+      seconds.innerText = 0;
+      clearInterval(myTimer);
+      alert("Activity complete");
+    }
+  }
+  }
