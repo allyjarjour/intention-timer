@@ -216,6 +216,8 @@ function timerStart() {
       seconds.innerText = 0;
       clearInterval(myTimer);
       alert("Activity complete");
+    } if (seconds.innerText < 10) {
+      seconds.innerText = "0" + seconds.innerText;
     }
   }
   }
