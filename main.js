@@ -39,6 +39,7 @@ var minuteAlert = document.querySelector('#minute-alert');
 var secondAlert = document.querySelector('#second-alert');
 var currentActTitle = document.querySelector('.current-activity-title');
 var catAlert = document.querySelector('#category-alert');
+var logActButton = document.querySelector('.log-act-button');
 
 window.onload = function hideTimerOnload() {
   timerCard.classList.add('hidden');
@@ -50,6 +51,7 @@ window.onload = function hideTimerOnload() {
   secondAlert.classList.add('hidden');
   currentActTitle.classList.add('hidden');
   catAlert.classList.add('hidden');
+  logActButton.classList.add('hidden');
 }
 
 // toggle categories - meditate, study and exercise
@@ -162,8 +164,6 @@ function addActivityAlert() {
 
 // change timer button
 
-var timerButton = document.querySelector('.timer-button');
-
 exBox.addEventListener('click', changeTimerEx);
 medBox.addEventListener('click', changeTimerMed);
 studyBox.addEventListener('click', changeTimerStudy);
@@ -178,6 +178,16 @@ function changeTimerMed() {
 
 function changeTimerStudy() {
   timerButton.style.border = "1px solid #B3FD78";
+}
+
+// change card two text for what you want to accomp
+
+var card2Text = document.querySelector('.card2-text');
+
+startButton.addEventListener('click', changeCard2Text);
+
+function changeCard2Text() {
+  card2Text.innerText = accompInput.value
 }
 
 // -----timer
@@ -212,10 +222,10 @@ function timerStart() {
     minutes.innerText = Math.floor( (totalSeconds/60) % 60 );
     seconds.innerText = Math.floor( (totalSeconds--) % 60 );
 
-    if (totalSeconds <= 0) {
-      seconds.innerText = 0;
+    if (totalSeconds < 0) {
       clearInterval(myTimer);
-      alert("Activity complete");
+      timerButton.innerText = "YOU'RE AMAZING!";
+      logActButton.classList.remove('hidden');
     // } if (seconds.innerText < 10) {
     //   seconds.innerText = "0" + seconds.innerText;
     // }
