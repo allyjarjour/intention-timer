@@ -206,14 +206,14 @@ aside p {
 #second-alert,
 #minute-alert,
 #category-alert {
-  font-size: 15px;
   color: #EFB7EC;
+  font-size: 15px;
 }
 
 .alert-icon {
-  width: 20px;
   height: 20px;
   margin-right: 5px;
+  width: 20px;
 }
 
 /* ------- */
@@ -237,21 +237,22 @@ aside p {
 }
 
 .timer {
-  font-size: 75px;
-  margin: 0 auto;
   color: white;
   font-family: 'Arial', sans-serif;
+  font-size: 75px;
   font-weight: bold;
+  margin: 0 auto;
 }
 
 .timer-button {
-  color: #FFF;
+
   background-color: #46424D;
   border-radius: 50%;
   border:1px solid #FFF;
+  color: #FFF;
   float: none;
-  width: 200px;
   height: 200px;
+  width: 200px;
 }
 
 .log-act-button {

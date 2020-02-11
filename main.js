@@ -222,6 +222,10 @@ function timerStart() {
     minutes.innerText = Math.floor( (totalSeconds/60) % 60 );
     seconds.innerText = Math.floor( (totalSeconds--) % 60 );
 
+    if (seconds.innerText < 10) {
+      seconds.innerText = ("0" + seconds.innerText);
+    }
+
     if (totalSeconds < 0) {
       clearInterval(myTimer);
       timerButton.innerText = "YOU'RE AMAZING!";
