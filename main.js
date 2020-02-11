@@ -226,9 +226,6 @@ function timerStart() {
       clearInterval(myTimer);
       timerButton.innerText = "YOU'RE AMAZING!";
       logActButton.classList.remove('hidden');
-    // } if (seconds.innerText < 10) {
-    //   seconds.innerText = "0" + seconds.innerText;
-    // }
   }
   }
   }

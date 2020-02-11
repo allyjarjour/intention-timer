@@ -253,3 +253,7 @@ aside p {
   width: 200px;
   height: 200px;
 }
+
+.log-act-button {
+  float: none;
+}
