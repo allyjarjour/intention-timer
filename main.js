@@ -223,13 +223,31 @@ function timerStart() {
     seconds.innerText = Math.floor( (totalSeconds--) % 60 );
 
     if (seconds.innerText < 10) {
-      seconds.innerText = ("0" + seconds.innerText);
+      seconds.innerText = ('0' + seconds.innerText);
     }
 
     if (totalSeconds < 0) {
       clearInterval(myTimer);
       timerButton.innerText = "YOU'RE AMAZING!";
       logActButton.classList.remove('hidden');
+
+
   }
   }
+  }
+
+
+  //Add past activity cards.
+
+  var allCategoryBoxes = document.querySelectorAll('.category-boxes');
+  var aside = document.querySelector('aside');
+  var categorySelector = allCategoryBoxes.innerText;
+  var cardContainer = document.querySelector('.card-container');
+  var logMessage = document.querySelector('.log-message');
+
+  logActButton.addEventListener('click', addPastAct);
+
+  function addPastAct() {
+    aside.insertAdjacentHTML('afterbegin', `<div><p>HI</p></div>`);
+    logMessage.classList.add('hidden');
   }
