@@ -150,6 +150,7 @@ aside p {
     height: 600px;
     margin: 100px 30px;
     padding-top: 40px;
+    position: relative;
     text-align: center;
     width: 65%;
 }
@@ -257,4 +258,5 @@ aside p {
 
 .log-act-button {
   float: none;
+  margin: 40px auto 0px auto;
 }
