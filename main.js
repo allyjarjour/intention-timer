@@ -2,16 +2,10 @@
 
 var studyBox = document.querySelector('#study-cat');
 var studyActive = document.querySelector('#study-cat-active');
-
-
 // meditation category variables
-
 var medBox = document.querySelector('#med-cat');
 var medActive = document.querySelector('#med-cat-active');
-
-
 // exercise category variables
-
 var exBox = document.querySelector('#exercise-cat');
 var exActive = document.querySelector('#exercise-cat-active');
 
@@ -20,7 +14,6 @@ var exActive = document.querySelector('#exercise-cat-active');
 var startButton = document.querySelector('.start-button');
 var mainCard = document.querySelector('.left-side');
 var timerCard = document.querySelector('.timer-card');
-
 
 startButton.addEventListener('click', addTimer)
 
@@ -33,7 +26,6 @@ function addTimer() {
 }
 
 // (studyBox.onclick == true || medBox.onclick == true || exBox.onclick == true)
-
 var accompAlert = document.querySelector('#accomp-alert');
 var minuteAlert = document.querySelector('#minute-alert');
 var secondAlert = document.querySelector('#second-alert');
@@ -99,6 +91,7 @@ function numbersOnly(minuteInput) {
   var regEx = /[^0-9]/g;
   minuteInput.value = minuteInput.value.replace(regEx, " ");
 }
+
 // add activity alert
 var accompInput = document.querySelector('.accomp-input');
 
@@ -157,10 +150,8 @@ startButton.addEventListener('click', addActivityAlert);
 function addActivityAlert() {
   if (medClickCount === 0 || exClickCount === 0 || studyClickCount === 0) {
     catAlert.classList.remove('hidden');
+  }
 }
-}
-
-
 
 // change timer button
 
@@ -199,7 +190,7 @@ var minutes = document.querySelector('.minutes');
 
 startButton.addEventListener('click', showTime);
 
-function showTime(){
+function showTime() {
   minutes.innerText = minuteInput.value;
   seconds.innerText = secondInput.value;
 }
@@ -230,6 +221,6 @@ function timerStart() {
       clearInterval(myTimer);
       timerButton.innerText = "YOU'RE AMAZING!";
       logActButton.classList.remove('hidden');
-  }
-  }
+      }
+    }
   }
