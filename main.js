@@ -230,8 +230,6 @@ function timerStart() {
       clearInterval(myTimer);
       timerButton.innerText = "YOU'RE AMAZING!";
       logActButton.classList.remove('hidden');
-
-
   }
   }
   }
@@ -239,15 +237,38 @@ function timerStart() {
 
   //Add past activity cards.
 
-  var allCategoryBoxes = document.querySelectorAll('.category-boxes');
-  var aside = document.querySelector('aside');
-  var categorySelector = allCategoryBoxes.innerText;
+  var allCategoryBoxes = document.querySelectorAll('#category-box-container');
   var cardContainer = document.querySelector('.card-container');
   var logMessage = document.querySelector('.log-message');
+  var timer = document.querySelector('.timer');
+  // var exText = document.querySelector('.ex-text');
+  // var studyText = document.querySelector('.study-text');
+  // var medText = document.querySelector('.med-text');
+  //
+  // allCategoryBoxes.addEventListener('click', function(event) {
+  //   if (event.target.className === 'ex-text') {
+  //       console.log('exercise')
+  //     }
+  //   if (event.target.className === 'med-text') {
+  //       console.log('med')
+  //     }
+  //   if (event.target.className === 'study-text') {
+  //     console.log('study')
+  //     }
+  // });
 
-  logActButton.addEventListener('click', addPastAct);
+
+logActButton.addEventListener('click', addPastAct);
 
   function addPastAct() {
-    aside.insertAdjacentHTML('afterbegin', `<div><p>HI</p></div>`);
+    cardContainer.insertAdjacentHTML('afterbegin', `
+    <div>
+      <p>'placeholder'</p>
+    </div>`);
     logMessage.classList.add('hidden');
+    currentActTitle.innerText = ('Completed Activity');
+    card2Text.classList.add('hidden');
+    timer.classList.add('hidden');
+    timerButton.classList.add('hidden');
+
   }
