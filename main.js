@@ -65,6 +65,8 @@ function switchToStudyActive() {
   medBox.classList.remove('hidden');
   exActive.classList.add('hidden');
   exBox.classList.remove('hidden');
+  activitySelector = "Study";
+  borderSelector = '#B3FD78';
 }
 
 medBox.addEventListener('click', switchToMedActive);
@@ -76,6 +78,8 @@ function switchToMedActive() {
   studyBox.classList.remove('hidden');
   exActive.classList.add('hidden');
   exBox.classList.remove('hidden');
+  activitySelector = "Meditate";
+  borderSelector = '#C278FD';
 }
 
 exBox.addEventListener('click', switchToExActive);
@@ -87,6 +91,8 @@ function switchToExActive() {
   studyBox.classList.remove('hidden');
   medBox.classList.remove('hidden');
   medActive.classList.add('hidden');
+  activitySelector = "Exercise";
+  borderSelector = '#FD8078';
 }
 
 // input validation
@@ -187,7 +193,7 @@ var card2Text = document.querySelector('.card2-text');
 startButton.addEventListener('click', changeCard2Text);
 
 function changeCard2Text() {
-  card2Text.innerText = accompInput.value
+  card2Text.innerText = accompInput.value;
 }
 
 // -----timer
@@ -234,41 +240,26 @@ function timerStart() {
   }
   }
 
-
   //Add past activity cards.
 
   var allCategoryBoxes = document.querySelectorAll('#category-box-container');
   var cardContainer = document.querySelector('.card-container');
   var logMessage = document.querySelector('.log-message');
   var timer = document.querySelector('.timer');
-  // var exText = document.querySelector('.ex-text');
-  // var studyText = document.querySelector('.study-text');
-  // var medText = document.querySelector('.med-text');
-  //
-  // allCategoryBoxes.addEventListener('click', function(event) {
-  //   if (event.target.className === 'ex-text') {
-  //       console.log('exercise')
-  //     }
-  //   if (event.target.className === 'med-text') {
-  //       console.log('med')
-  //     }
-  //   if (event.target.className === 'study-text') {
-  //     console.log('study')
-  //     }
-  // });
-
+  var activitySelector;
+  // var borderSelector;
 
 logActButton.addEventListener('click', addPastAct);
 
   function addPastAct() {
     cardContainer.insertAdjacentHTML('afterbegin', `
-    <div>
-      <p>'placeholder'</p>
-    </div>`);
+      <p class="past-act-card"><span class="act-selector">${activitySelector}</span><br />
+      <span>${minuteInput.value} MINUTES </span>
+      <span>${secondInput.value} SECONDS</span><br /><span>${accompInput.value}</span></p>`);
     logMessage.classList.add('hidden');
     currentActTitle.innerText = ('Completed Activity');
     card2Text.classList.add('hidden');
     timer.classList.add('hidden');
     timerButton.classList.add('hidden');
-
+    // document.querySelector('.past-act-card').style.border('1px solid ${borderSelector}');
   }
