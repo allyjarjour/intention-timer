@@ -122,7 +122,7 @@ button {
   width: 100%;
 }
 
-/* _________ */
+/* past activities section */
 
 aside {
   background-color: #2B2733;
@@ -138,6 +138,26 @@ aside p {
   color: #CBC9CF;
   font-weight: 300;
   text-align: center;
+}
+
+.past-act-card {
+  background-color: #46424D;
+  border-radius: 4px;
+  /* border: 1px solid green; */
+  box-shadow: 20px 20px 50px 10px #26222D;
+  height: 60px;
+  margin: 35px auto 0px auto;
+  padding: 10px;
+  text-align: left;
+  width: 85%;
+}
+
+.past-act-card p {
+  font-size: 10px;
+}
+
+.act-selector {
+  font-weight: bold;
 }
 
 /* timer card for start button */
@@ -219,14 +239,6 @@ aside p {
 
 /* ------- */
 
-/* #current-box-container {
-  display: inline-block;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding-bottom: 60px;
-} */
-
 .current-activity-title {
   position: absolute;
 }
@@ -246,7 +258,6 @@ aside p {
 }
 
 .timer-button {
-
   background-color: #46424D;
   border-radius: 50%;
   border:1px solid #FFF;
