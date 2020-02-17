@@ -274,4 +274,10 @@ aside p {
   cursor: pointer;
   float: none;
   margin: 40px auto 0px auto;
+  width: 300px;
+}
+
+input {
+  color: #CBC9CF;
+  font-family: 'Montserrat', sans-serif;
 }

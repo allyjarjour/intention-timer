@@ -43,6 +43,7 @@ startButton.addEventListener('click', addSecondAlert);
 startButton.addEventListener('click', addTimer)
 startButton.addEventListener('click', addTotalSeconds);
 startButton.addEventListener('click', changeCard2Text);
+startButton.addEventListener('click', reloadTimer);
 startButton.addEventListener('click', showTime);
 studyBox.addEventListener('click', changeTimerStudy);
 studyBox.addEventListener('click', switchToStudyActive);
@@ -233,8 +234,6 @@ function resetCatsAndInput() {
   secondInput.value = "";
   minuteInput.value = "";
 }
-
-startButton.addEventListener('click', reloadTimer);
 
 function reloadTimer() {
   card2Text.classList.remove('hidden');
