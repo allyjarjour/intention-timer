@@ -1,0 +1,277 @@
+
+body {
+  background-color: #2B2733;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px;
+}
+
+h1 {
+  background-color: #46424D;
+  color: #FFF;
+  font-weight: 400;
+  font-size: 28px;
+  height: 60px;
+  margin: 0px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #CBC9CF;
+  font-weight: 300;
+  padding-top: 15px;
+  padding-left: 40px;
+}
+
+.left-side {
+  color: #CBC9CF;
+  display: inline-block;
+  flex: 2;
+  width: 60%;
+}
+
+.page-content {
+  display: flex;
+}
+
+.new-activity {
+  background-color: #46424D;
+  border-radius: 4px;
+  box-shadow: 20px 20px 50px 10px #26222D;
+  margin: auto;
+  padding: 60px 100px 150px 100px;
+  width: 65%;
+}
+
+.new-activity p {
+  font-size: 20px;
+}
+
+img {
+  height: 30px;
+  width: 30px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #FFF;
+}
+
+.accomp-input {
+  width: 100%;
+}
+
+button {
+  background-color: #FFF; /* Green */
+  border-radius: 4px;
+  border: none;
+  color: #46424D;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-size: 16px;
+  margin-top: 75px;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+}
+
+/* holds category boxes */
+
+.category-boxes {
+  border: 2px solid #FFF;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 60px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.hidden {
+  display: none;
+}
+
+#category-box-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+#category-box-container p {
+  margin: 0px;
+}
+
+/* container to align minutes and seconds input */
+
+.time-input-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+.time {
+  width: 40%;
+}
+
+.time-input {
+  width: 100%;
+}
+
+/* past activities section */
+
+aside {
+  background-color: #2B2733;
+  border-left: solid 3px #46424D;
+  display: inline-block;
+  flex: 1;
+  height: 1000px;
+  vertical-align: top;
+  width: 35%;
+}
+
+aside p {
+  color: #CBC9CF;
+  font-weight: 300;
+  text-align: center;
+}
+
+.past-act-card {
+  background-color: #46424D;
+  border-radius: 4px;
+  /* border: 1px solid green; */
+  box-shadow: 20px 20px 50px 10px #26222D;
+  height: 60px;
+  margin: 35px auto 0px auto;
+  padding: 10px;
+  text-align: left;
+  width: 85%;
+}
+
+.past-act-card p {
+  font-size: 10px;
+}
+
+.act-selector {
+  font-weight: bold;
+}
+
+/* timer card for start button */
+
+.timer-card {
+    background-color: #46424D;
+    border-radius: 4px;
+    box-shadow: 20px 20px 50px 10px #26222D;
+    flex: 2;
+    height: 600px;
+    margin: 100px 30px;
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+    width: 65%;
+}
+
+/* study button  */
+
+#study-cat-active {
+  border: 2px solid #B3FD78;
+  border-radius: 4px;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+#study-text-active {
+  color: #B3FD78;
+}
+
+/* meditate button  */
+
+#med-cat-active {
+  border: 2px solid #C278FD;
+  border-radius: 4px;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+#med-text-active{
+  color: #C278FD;
+}
+
+/* exercise button  */
+
+#exercise-cat-active {
+  border: 2px solid #FD8078;
+  border-radius: 4px;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+#exercise-text-active {
+  color: #FD8078;
+}
+
+#accomp-alert,
+#second-alert,
+#minute-alert,
+#category-alert {
+  color: #EFB7EC;
+  font-size: 15px;
+}
+
+.alert-icon {
+  height: 20px;
+  margin-right: 5px;
+  width: 20px;
+}
+
+/* ------- */
+
+.current-activity-title {
+  position: absolute;
+}
+
+.card2-text {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.timer {
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 75px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.timer-button {
+  background-color: #46424D;
+  border-radius: 50%;
+  border:1px solid #FFF;
+  color: #FFF;
+  cursor: pointer;
+  float: none;
+  height: 200px;
+  width: 200px;
+}
+
+.log-act-button {
+  cursor: pointer;
+  float: none;
+  margin: 40px auto 0px auto;
+}

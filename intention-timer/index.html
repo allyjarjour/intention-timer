@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+    <title>Intention Timer</title>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>INTENTION TIMER</h1>
+  </header>
+  <main class="page-content">
+    <section class="left-side">
+      <h2>New Activity</h2>
+      <section class="new-activity">
+        <p>Select a category:</p>
+        <div id="category-box-container">
+          <div class="category-boxes" id="study-cat">
+            <img src="assets/study.svg" alt="Study Icon">
+            <p class="study-text">Study</p>
+          </div>
+          <div class="category-boxes" id="study-cat-active">
+            <img src="assets/study-active.svg" alt="Active Study Icon">
+            <p id="study-text-active">Study</p>
+          </div>
+          <div class="category-boxes" id="med-cat">
+            <img src="assets/meditate.svg" alt="Meditate Icon">
+            <p class="med-text">Meditate</p>
+          </div>
+          <div class="category-boxes" id="med-cat-active">
+            <img src="assets/meditate-active.svg" alt="Active Meditate Icon">
+            <p id="med-text-active">Meditate</p>
+          </div>
+          <div class="category-boxes" id="exercise-cat">
+            <img src="assets/exercise.svg" alt="Exercise Icon">
+            <p id="ex-text">Exercise</p>
+          </div>
+          <div class="category-boxes" id="exercise-cat-active">
+            <img src="assets/exercise-active.svg" alt="Exercise Icon">
+            <p id="exercise-text-active">Exercise</p>
+          </div>
+          <p id="category-alert"><img class="alert-icon" src="assets/warning.svg">please choose an activity</p>
+        </div>
+        <p>What would you like to accomplish during this time?</p>
+        <input class="accomp-input" type="text" minlength="1" maxlength="100"/>
+        <p id="accomp-alert"><img class="alert-icon" src="assets/warning.svg">Please add description</p>
+        <section class="time-input-container">
+          <div class="time">
+            <p>Minutes</p>
+            <input class="time-input" id="minute-input" oninput="numbersOnly(this)" type="text" min= "1"/>
+            <p id="minute-alert"><img class="alert-icon" src="assets/warning.svg">please input time</p>
+          </div>
+          <div class="time">
+            <p>Seconds</p>
+            <input class="time-input" id="second-input" oninput="numbersOnly(this)" type="text" min = "1" />
+            <p id="second-alert"><img class="alert-icon" src="assets/warning.svg">please input time</p>
+          </div>
+        </section>
+        <button class="start-button">START ACTIVITY</button>
+      </section>
+    </section>
+    <h2 class="current-activity-title">Current Activity</h2>
+    <section class="timer-card">
+      <div>
+        <p class="card2-text">Deep Breathing</p>
+        <p class="timer"><span class="minutes">05</span>:<span class="seconds">00</span></p>
+        <button class="timer-button">START</button>
+        <p><button class="log-act-button">LOG ACTIVITY</button></p>
+      </div>
+    </section>
+    <aside>
+      <h2>Past Activities</h2>
+      <p class="log-message">You haven't logged any activities yet.
+        <br />Complete the form to the left to get started.</p>
+      <section class="card-container"></section>
+    </aside>
+  </main>
+  <script type="text/javascript" src="main.js"></script>
+</body>

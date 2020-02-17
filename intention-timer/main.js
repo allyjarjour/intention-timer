@@ -1,52 +1,72 @@
-var accompAlert = document.querySelector('#accomp-alert');
-var accompInput = document.querySelector('.accomp-input');
-var activitySelector;
-var allCategoryBoxes = document.querySelectorAll('#category-box-container');
-var card2Text = document.querySelector('.card2-text');
-var cardContainer = document.querySelector('.card-container');
-var catAlert = document.querySelector('#category-alert');
-var currentActTitle = document.querySelector('.current-activity-title');
-var exActive = document.querySelector('#exercise-cat-active');
-var exBox = document.querySelector('#exercise-cat');
-var exClickCount = 0;
-var logActButton = document.querySelector('.log-act-button');
-var logMessage = document.querySelector('.log-message');
-var mainCard = document.querySelector('.left-side');
-var medActive = document.querySelector('#med-cat-active');
-var medBox = document.querySelector('#med-cat');
-var medClickCount = 0;
-var minuteAlert = document.querySelector('#minute-alert');
-var minuteInput = document.querySelector('#minute-input');
-var minuteInput = document.querySelector('#minute-input');
-var minutes = document.querySelector('.minutes');
-var secondAlert = document.querySelector('#second-alert');
-var secondInput = document.querySelector('#second-input');
-var secondInput = document.querySelector('#second-input');
-var seconds = document.querySelector('.seconds');
-var startButton = document.querySelector('.start-button');
-var studyActive = document.querySelector('#study-cat-active');
+// study category variables
 var studyBox = document.querySelector('#study-cat');
-var studyClickCount = 0;
-var timer = document.querySelector('.timer');
-var timerButton = document.querySelector('.timer-button');
+var studyActive = document.querySelector('#study-cat-active');
+var medBox = document.querySelector('#med-cat');
+var medActive = document.querySelector('#med-cat-active');
+var exBox = document.querySelector('#exercise-cat');
+var exActive = document.querySelector('#exercise-cat-active');
+
+// variables for switching to timer card
+var startButton = document.querySelector('.start-button');
+var mainCard = document.querySelector('.left-side');
 var timerCard = document.querySelector('.timer-card');
 
-exBox.addEventListener('click', changeTimerEx);
-exBox.addEventListener('click', switchToExActive);
-logActButton.addEventListener('click', addPastAct);
-medBox.addEventListener('click', changeTimerMed);
+var accompAlert = document.querySelector('#accomp-alert');
+var minuteAlert = document.querySelector('#minute-alert');
+var secondAlert = document.querySelector('#second-alert');
+var currentActTitle = document.querySelector('.current-activity-title');
+var catAlert = document.querySelector('#category-alert');
+var logActButton = document.querySelector('.log-act-button');
+
+var minuteInput = document.querySelector('#minute-input');
+var secondInput = document.querySelector('#second-input');
+
+var accompInput = document.querySelector('.accomp-input');
+
+var medClickCount = 0;
+var exClickCount = 0;
+var studyClickCount = 0;
+
+var card2Text = document.querySelector('.card2-text');
+
+var minuteInput = document.querySelector('#minute-input');
+var secondInput = document.querySelector('#second-input');
+var seconds = document.querySelector('.seconds');
+var minutes = document.querySelector('.minutes');
+
+var timerButton = document.querySelector('.timer-button');
+
+var allCategoryBoxes = document.querySelectorAll('#category-box-container');
+var cardContainer = document.querySelector('.card-container');
+var logMessage = document.querySelector('.log-message');
+var timer = document.querySelector('.timer');
+var activitySelector;
+
+startButton.addEventListener('click', addTimer)
+
+studyBox.addEventListener('click', switchToStudyActive);
 medBox.addEventListener('click', switchToMedActive);
+exBox.addEventListener('click', switchToExActive);
+
 startButton.addEventListener('click', addAccompAlert);
-startButton.addEventListener('click', addActivityAlert);
 startButton.addEventListener('click', addMinuteAlert);
 startButton.addEventListener('click', addSecondAlert);
-startButton.addEventListener('click', addTimer)
-startButton.addEventListener('click', addTotalSeconds);
-startButton.addEventListener('click', changeCard2Text);
-startButton.addEventListener('click', showTime);
+startButton.addEventListener('click', addActivityAlert);
+
+exBox.addEventListener('click', changeTimerEx);
+medBox.addEventListener('click', changeTimerMed);
 studyBox.addEventListener('click', changeTimerStudy);
-studyBox.addEventListener('click', switchToStudyActive);
+
+startButton.addEventListener('click', changeCard2Text);
+
+startButton.addEventListener('click', showTime);
+
+startButton.addEventListener('click', addTotalSeconds);
+
 timerButton.addEventListener('click', timerStart);
+
+logActButton.addEventListener('click', addPastAct);
+
 
 function addTimer() {
   if (accompInput.value.length > 0 && minuteInput.value.length > 0 && secondInput.value.length > 0) {
@@ -192,7 +212,6 @@ function timerStart() {
 }
 
 function addPastAct() {
-  if (logActButton.innerText == ('LOG ACTIVITY')) {
   cardContainer.insertAdjacentHTML('afterbegin', `
     <p class="past-act-card"><span class="act-selector">${activitySelector}</span><br />
     <span>${minuteInput.value} MINUTES </span>
@@ -202,46 +221,4 @@ function addPastAct() {
   card2Text.classList.add('hidden');
   timer.classList.add('hidden');
   timerButton.classList.add('hidden');
-  }
-}
-
-logActButton.addEventListener('click', returnToNewAct);
-logActButton.addEventListener('click', changeLogButton);
-
-function changeLogButton() {
-  logActButton.innerText = ('CREATE A NEW ACTIVITY');
-}
-
-function returnToNewAct() {
-  if (logActButton.innerText == ('CREATE A NEW ACTIVITY')) {
-    mainCard.classList.remove('hidden');
-    timerCard.classList.add('hidden');
-    resetCatsAndInput();
-    currentActTitle.innerText = ('New Activity');
-  }
-}
-
-function resetCatsAndInput() {
-  medActive.classList.add('hidden');
-  studyActive.classList.add('hidden');
-  exActive.classList.add('hidden');
-  medBox.classList.remove('hidden');
-  studyBox.classList.remove('hidden');
-  exBox.classList.remove('hidden');
-  catAlert.classList.add('hidden');
-  accompInput.value = "";
-  secondInput.value = "";
-  minuteInput.value = "";
-}
-
-startButton.addEventListener('click', reloadTimer);
-
-function reloadTimer() {
-  card2Text.classList.remove('hidden');
-  timer.classList.remove('hidden');
-  timerButton.classList.remove('hidden');
-  timerButton.innerText = ('START');
-  logActButton.innerText = ('LOG ACTIVITY')
-  showTime();
-  addTotalSeconds();
 }
