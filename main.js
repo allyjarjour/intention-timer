@@ -54,6 +54,7 @@ function addTimer() {
     mainCard.classList.add('hidden');
     timerCard.classList.remove('hidden');
     currentActTitle.classList.remove('hidden');
+    logActButton.classList.add('hidden');
   }
 }
 
