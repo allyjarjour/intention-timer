@@ -50,7 +50,6 @@ h2 {
 img {
   height: 30px;
   width: 30px;
-  pointer-events: none;
 }
 
 input {
@@ -103,11 +102,9 @@ button {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-bottom: 60px;
-  /* pointer-events: none; */
 }
 
 #category-box-container p {
-  pointer-events: none;
   margin: 0px;
 }
 
@@ -210,7 +207,6 @@ aside p {
 
 #med-text-active{
   color: #C278FD;
-  pointer-events: none;
 }
 
 /* exercise button  */
@@ -278,10 +274,4 @@ aside p {
   cursor: pointer;
   float: none;
   margin: 40px auto 0px auto;
-  width: 300px;
-}
-
-input {
-  color: #CBC9CF;
-  font-family: 'Montserrat', sans-serif;
 }
