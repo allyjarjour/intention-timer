@@ -40,6 +40,8 @@ startButton.addEventListener('click', addAccompAlert);
 startButton.addEventListener('click', addActivityAlert);
 startButton.addEventListener('click', addMinuteAlert);
 startButton.addEventListener('click', addSecondAlert);
+logActButton.addEventListener('click', addPastAct);
+allCategoryBoxes.addEventListener('click', addActiveStates);
 startButton.addEventListener('click', addTimer)
 startButton.addEventListener('click', addTotalSeconds);
 startButton.addEventListener('click', changeCard2Text);
@@ -69,6 +71,20 @@ window.onload = function hideTimerOnload() {
   currentActTitle.classList.add('hidden');
   catAlert.classList.add('hidden');
   logActButton.classList.add('hidden');
+}
+
+function addActiveStates(event) {
+  switch(event.target.id) {
+    case 'med-cat':
+      switchToMedActive();
+      break;
+    case 'exercise-cat':
+      switchToExActive();
+      break;
+    case 'study-cat':
+      switchToStudyActive();
+      break;
+  }
 }
 
 function switchToStudyActive() {
