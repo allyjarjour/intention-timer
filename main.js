@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 var studyBox = document.querySelector('#study-cat');
 var studyActive = document.querySelector('#study-cat-active');
 var medBox = document.querySelector('#med-cat');
@@ -10,6 +11,8 @@ var mainCard = document.querySelector('.left-side');
 var timerCard = document.querySelector('.timer-card');
 =======
 >>>>>>> ec9fd447b5175a1b84380881077a65425de15804
+=======
+>>>>>>> 25071d1f8b05bf1fbc9150f583c5ca5147fe2459
 var accompAlert = document.querySelector('#accomp-alert');
 var accompInput = document.querySelector('.accomp-input');
 var activitySelector;
@@ -23,6 +26,7 @@ var exBox = document.querySelector('#exercise-cat');
 var exClickCount = 0;
 var logActButton = document.querySelector('.log-act-button');
 <<<<<<< HEAD
+<<<<<<< HEAD
 var minuteInput = document.querySelector('#minute-input');
 var secondInput = document.querySelector('#second-input');
 var accompInput = document.querySelector('.accomp-input');
@@ -31,6 +35,8 @@ var exClickCount = 0;
 var studyClickCount = 0;
 var card2Text = document.querySelector('.card2-text');
 =======
+=======
+>>>>>>> 25071d1f8b05bf1fbc9150f583c5ca5147fe2459
 var logMessage = document.querySelector('.log-message');
 var mainCard = document.querySelector('.left-side');
 var medActive = document.querySelector('#med-cat-active');
@@ -38,13 +44,17 @@ var medBox = document.querySelector('#med-cat');
 var medClickCount = 0;
 var minuteAlert = document.querySelector('#minute-alert');
 var minuteInput = document.querySelector('#minute-input');
+<<<<<<< HEAD
 >>>>>>> ec9fd447b5175a1b84380881077a65425de15804
+=======
+>>>>>>> 25071d1f8b05bf1fbc9150f583c5ca5147fe2459
 var minuteInput = document.querySelector('#minute-input');
 var minutes = document.querySelector('.minutes');
 var secondAlert = document.querySelector('#second-alert');
 var secondInput = document.querySelector('#second-input');
 var secondInput = document.querySelector('#second-input');
 var seconds = document.querySelector('.seconds');
+<<<<<<< HEAD
 <<<<<<< HEAD
 var minutes = document.querySelector('.minutes');
 var timerButton = document.querySelector('.timer-button');
@@ -56,6 +66,8 @@ var activitySelector;
 
 startButton.addEventListener('click', addTimer)
 =======
+=======
+>>>>>>> 25071d1f8b05bf1fbc9150f583c5ca5147fe2459
 var startButton = document.querySelector('.start-button');
 var studyActive = document.querySelector('#study-cat-active');
 var studyBox = document.querySelector('#study-cat');
@@ -69,11 +81,15 @@ exBox.addEventListener('click', switchToExActive);
 logActButton.addEventListener('click', addPastAct);
 medBox.addEventListener('click', changeTimerMed);
 medBox.addEventListener('click', switchToMedActive);
+<<<<<<< HEAD
 >>>>>>> ec9fd447b5175a1b84380881077a65425de15804
+=======
+>>>>>>> 25071d1f8b05bf1fbc9150f583c5ca5147fe2459
 startButton.addEventListener('click', addAccompAlert);
 startButton.addEventListener('click', addActivityAlert);
 startButton.addEventListener('click', addMinuteAlert);
 startButton.addEventListener('click', addSecondAlert);
+<<<<<<< HEAD
 <<<<<<< HEAD
 startButton.addEventListener('click', addActivityAlert);
 exBox.addEventListener('click', changeTimerEx);
@@ -86,6 +102,10 @@ timerButton.addEventListener('click', timerStart);
 logActButton.addEventListener('click', addPastAct);
 allCategoryBoxes.addEventListener('click', addActiveStates);
 =======
+=======
+logActButton.addEventListener('click', addPastAct);
+allCategoryBoxes.addEventListener('click', addActiveStates);
+>>>>>>> 25071d1f8b05bf1fbc9150f583c5ca5147fe2459
 startButton.addEventListener('click', addTimer)
 startButton.addEventListener('click', addTotalSeconds);
 startButton.addEventListener('click', changeCard2Text);
@@ -94,7 +114,10 @@ startButton.addEventListener('click', showTime);
 studyBox.addEventListener('click', changeTimerStudy);
 studyBox.addEventListener('click', switchToStudyActive);
 timerButton.addEventListener('click', timerStart);
+<<<<<<< HEAD
 >>>>>>> ec9fd447b5175a1b84380881077a65425de15804
+=======
+>>>>>>> 25071d1f8b05bf1fbc9150f583c5ca5147fe2459
 
 function addTimer() {
   if (accompInput.value.length > 0 && minuteInput.value.length > 0 && secondInput.value.length > 0) {
